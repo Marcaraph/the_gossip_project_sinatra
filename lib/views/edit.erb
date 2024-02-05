@@ -1,15 +1,13 @@
-# <html>
-#   <head>
-#     <title>Edit Gossip</title>
-#   </head>  
-#   <body>
-#     <h1>Edit Gossip</h1>
-    
-#     <form action="/gossips/<%= @gossip.id %>/edit" method="post">
-#       <label for="content">Content :</label>
-#       <textarea name="content" id="content"><%= @gossip.content %></textarea>
-
-#     <input type="submit" value="Update Gossip">
-#     </form>
-#   </body>
-# </html>    
+<html>
+  <head>
+    <title>Edit Gossip</title>
+  </head>  
+  <body>
+    <h1>Edit Gossip</h1>
+    <p>Modifie ton gossip en remplissant la ligne de texte ci-dessous</p>
+    <form action='/gossips/<%= params['id'] %>/edit/' method='POST'>
+    Balance ton potin : <input type='text' name='new_content'/><br/>
+    <input type='submit'/>
+  </form>
+  </body>
+</html>    
